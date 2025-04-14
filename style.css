@@ -1,0 +1,228 @@
+/* Genel vücut düzenlemeleri */
+body {
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  background-image: url('img/background.png'); /* Arka plan resmi */
+  background-size: cover; /* Resmi ekran boyutuna göre yay */
+  background-position: center center; /* Resmi ortala */
+  background-repeat: no-repeat; /* Resmi tekrar etme */
+  margin-top: 0; /* Navbar ile üst kısmı birleştirmek için */
+}
+
+/* Navbar düzenlemeleri */
+.navbar {
+  background-color: transparent !important; /* Transparan arka plan */
+  box-shadow: none; /* Gölgeyi kaldır */
+  position: fixed; /* Sayfa ile sabit duracak şekilde */
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Sayfa içeriğinin üstünde olmasını sağlamak için */
+  padding: 0; /* Padding'i sıfırlayarak navbar'ı sayfa ile birleştiriyoruz */
+}
+
+.navbar-nav {
+  justify-content: center; /* Menüyü ortala */
+  width: 100%;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 15px; /* Menü öğeleri arasındaki boşluk */
+  margin-right: 15px; /* Menü öğeleri arasındaki boşluk */
+}
+
+.navbar-toggler {
+  border: none; /* Menü butonunun kenarını kaldır */
+}
+
+.navbar .nav-link {
+  color: #643727; /* Menü bağlantılarının rengi */
+  font-weight: 600;
+  text-transform: uppercase; /* Yazıların daha net olması için büyük harf */
+}
+
+.navbar .nav-link:hover {
+  color: #222; /* Hover durumunda renk değişimi */
+}
+
+/* Hero özel düzen */
+#hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 60px; /* Navbar'ın altındaki boşluk */
+}
+
+
+/* Fade-in animasyonu */
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tüm ana bölümler için kutu yapısı ve radius */
+section.container-box,
+#skills,
+#about,
+#projects,
+#featured {
+  background: white;
+  border-radius: 16px;
+  padding: 40px 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  margin: 40px auto;
+  width: 90%;
+  max-width: 1100px;
+}
+/* Proje kartları */
+.card {
+  position: relative;
+  overflow: hidden;
+  height: 350px;
+}
+
+.card-body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  z-index: 2; /* Kartın metninin üstte olmasını sağlar */
+}
+
+/* Arka plandaki görsellerin netliği arttırılmış */
+.card .card-body {
+  background-color: transparent; /* Arka planı tamamen şeffaf yapıyoruz */
+}
+
+.card-1 {
+  background-image: url('img/projeler/Card1.png'); /* Resmin yolunu buraya ekleyin */
+  background-size: cover;
+  background-position: center;
+  z-index: 1; /* Görselin kartın metninden arkada olmasını sağlıyoruz */
+}
+
+.card-2 {
+  background-image: url('img/projeler/Card2.png'); /* Resmin yolunu buraya ekleyin */
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.card-3 {
+  background-image: url('img/projeler/Card3.png'); /* Resmin yolunu buraya ekleyin */
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.card-4 {
+  background-image: url('img/projeler/Card4.png'); /* Resmin yolunu buraya ekleyin */
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.card-5 {
+  background-image: url('img/projeler/Card5.png'); /* Resmin yolunu buraya ekleyin */
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.card-6 {
+  background-image: url('img/projeler/Card6.png'); /* Resmin yolunu buraya ekleyin */
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+/* Kart başlıkları ve linklerin stilleri */
+.card a {
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  text-decoration: none;
+  color: #ffffff; /* Link rengi mavi */
+}
+
+.card a:hover {
+  text-decoration: underline;
+  color: rgb(17, 0, 255); /* Hover durumunda kırmızı renk */
+}
+
+
+/* Son proje */
+#featured .row {
+  gap: 10px;
+}
+
+#featured h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.carousel-item img {
+  border-radius: 12px;
+  object-fit: cover;
+  width: 100%;
+  max-height: 300px;
+}
+
+/* Footer */
+footer {
+  border-top: 3px solid #643727;
+  background-color: #222;
+  color: white;
+}
+
+/* Fade-in class */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Sayfa içerikleri için margin düzenlemeleri */
+section.container-box {
+  margin-top: 100px; /* Navbar ile sayfa arasındaki boşluğu düzenle */
+}
+
+/* Carousel buton ikonları görünür ve her modda düzgün */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 16 16'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 16 16'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+/* Dil Seçici Stil */
+.lang-selector {
+  font-weight: bold;
+  color: #643727; /* Dil seçici metni rengi */
+  text-transform: uppercase;
+  padding: 5px;
+}
+
+.lang-selector:hover {
+  color: #222; /* Hover sırasında renk değişikliği */
+}
