@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelector("#project3").textContent = "An in-game store (blacksmith) system was created, where players can purchase items using coins or ads. Interactive game elements such as breakable crates, collectible objects, and health tents were introduced to allow more interaction in the game world.";
       document.querySelector("#project4").textContent = "A total of three levels were designed, each equipped with its own music and visuals. Checkpoints and death mechanics were integrated to create a more dynamic player experience during level transitions.";
       document.querySelector("#project5").textContent = "The sound design of the game was given special attention, with music and effects credited in the credit scene. Transition effects, fade animations, and general UX improvements were implemented using DOTween, enhancing the visual and auditory experience.";
-      document.querySelector("#project6").textContent = "The game is being prepared for release on the Play Store and is currently in closed beta testing.";
+      document.querySelector("#project6").textContent = "My game has been published on Play Store.";
 
       // Navbar - İngilizce
       document.querySelector(".navbar-nav .nav-item:nth-child(1) a").textContent = "About";
